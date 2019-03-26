@@ -14,10 +14,10 @@ Things you may want to cover:
 
 * System dependencies
 
-    -Bulma ('bulma-rails', '~> 0.7.4')
+    - Bulma ('bulma-rails', '~> 0.7.4')
    - Guard ('guard', '~> 2.15')
    - Guard Livereload ('guard-livereload', '~> 2.5', '>= 2.5.2')
-    -Simple_form ('simple_form', '~> 4.1')
+    - Simple_form ('simple_form', '~> 4.1')
 
     
     Created Models for both the Post and Comment
