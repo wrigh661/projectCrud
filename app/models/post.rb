@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
-  validates_presence_of :title, :author, :body 
+
+  validates :body, presence: true
+  validates :title, presence: true
+  validates :author, presence: true
 end
