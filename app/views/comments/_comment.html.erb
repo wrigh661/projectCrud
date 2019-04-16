@@ -3,12 +3,16 @@
 
     <div class="media-content">
       <div class="content">
-        <p>
+        <% if comment.created_at != nil  %>
+        <p>Posted <%= distance_of_time_in_words(comment.post.created_at, comment.created_at) %> later</p>
+        <% end %>
+  <p>
 
           <strong><%= comment.name %> </strong>
 
             <%= comment.title %>
             <br>
+
         </p>
 
         <p>
@@ -17,7 +21,8 @@
 
       </div>
     </div>
-  
+
+  <%= link_to "Edit", edit_post_comment_path(comment.post.id, comment.id), class: "button is-success"%>
 
   <hr />
 
