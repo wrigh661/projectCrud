@@ -24,8 +24,8 @@ class CommentsController < ApplicationController
 
       def update
         @comment = @post.comments.find(params[:id])
-        @comment.update_attributes(comment_params)
-          if @comment.save
+        @comment.update_attributes(params[:comment].permit(:title, :name, :comment))
+          if @comment.update(params[:comment].permit(:title, :name, :comment))
             redirect_to post_path(@post)
           else
             render 'edit'
